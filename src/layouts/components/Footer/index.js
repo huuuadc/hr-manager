@@ -4,12 +4,12 @@ import classNames from 'classnames/bind';
 import { Link } from 'react-router-dom';
 
 import style from './Footer.module.scss';
-import facebook from '~/assets/images';
+import image from '~/assets/images';
 
 const cx = classNames.bind(style);
 
 const dataLogo = {
-    url: 'https://demo.riotechz.com/img/home/logo.png',
+    url: image.logoPNG,
     alt: 'RiotechLogo',
     contentLogo:
         'Lorem ipsum dolor sit amet, consectetur adipiscing elit sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim',
@@ -109,16 +109,16 @@ function Footer() {
                             <div className={cx('block-contact-title')}>FOLLOW US ON</div>
                             <div className={cx('social')}>
                                 <div className={cx('list-inline')}>
-                                    <img src={facebook.facebook} alt="Image1"></img>
+                                    <img src={image.facebook} alt="Image1"></img>
                                 </div>
                                 <div className={cx('list-inline')}>
-                                    <img src={facebook.google} alt="Image2"></img>
+                                    <img src={image.google} alt="Image2"></img>
                                 </div>
                                 <div className={cx('list-inline')}>
-                                    <img src={facebook.twiter} alt="Image3"></img>
+                                    <img src={image.twiter} alt="Image3"></img>
                                 </div>
                                 <div className={cx('list-inline')}>
-                                    <img src={facebook.instagram} alt="Image4"></img>
+                                    <img src={image.instagram} alt="Image4"></img>
                                 </div>
                             </div>
                         </div>

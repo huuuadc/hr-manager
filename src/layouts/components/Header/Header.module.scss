@@ -37,7 +37,7 @@
 }
 
 .active {
-    border-bottom: 5px solid #333;
+    //border-bottom: 5px solid #333;
 }
 
 .menu-item {
@@ -46,11 +46,16 @@
     align-items: center;
     justify-content: baseline;
     padding: 0px 20px;
+    position: relative;
+
+    a {
+    }
 }
 
 .border-line {
     height: 100%;
     &:hover {
+        //outline: 5px  solid #fb0;
         border-bottom: 5px solid #333;
     }
 }

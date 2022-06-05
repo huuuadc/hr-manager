@@ -5,9 +5,14 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faMagnifyingGlass, faUser, faCartShopping } from '@fortawesome/free-solid-svg-icons';
 
 import style from './Header.module.scss';
-//import image from '~/assets/images';
+import image from '~/assets/images';
 
 const cx = classNames.bind(style);
+
+const sty = {
+    width: '70%',
+    height: '70%',
+};
 
 const menuItem = [
     { title: 'HOME', link: '/', active: true },
@@ -23,14 +28,16 @@ function Header() {
             <div className={cx('inner')}>
                 <div className={cx('logo')}>
                     <a href="/#">
-                        <img src={'https://demo.riotechz.com/img/home/logo.png'} alt="ABCD"></img>
+                        <img style={sty} src={image.logoPNG} alt="ABCD"></img>
                     </a>
                 </div>
                 <div className={cx('main-menu')}>
                     {menuItem.map((item, index) => {
                         return (
                             <div key={index} className={cx('menu-item', 'border-line', { active: item.active })}>
-                                {item.title}
+                                <a href="/#" className="">
+                                    {item.title}
+                                </a>
                             </div>
                         );
                     })}
