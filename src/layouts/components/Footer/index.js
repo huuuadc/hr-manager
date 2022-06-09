@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom';
 
 import style from './Footer.module.scss';
 import image from '~/assets/images';
-
+import { UploadIcon, InboxIcon, MessageIcon } from '~/components/Icons';
 const cx = classNames.bind(style);
 
 const dataLogo = {
@@ -109,7 +109,7 @@ function Footer() {
                             <div className={cx('block-contact-title')}>FOLLOW US ON</div>
                             <div className={cx('social')}>
                                 <div className={cx('list-inline')}>
-                                    <img src={image.facebook} alt="Image1"></img>
+                                    <UploadIcon />
                                 </div>
                                 <div className={cx('list-inline')}>
                                     <img src={image.google} alt="Image2"></img>

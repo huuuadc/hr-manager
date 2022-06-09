@@ -1,5 +1,6 @@
 import classNames from 'classnames/bind';
 import Tippy from '@tippyjs/react';
+import { Link } from 'react-router-dom';
 //import Headless from '@tippyjs/react/headless';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faMagnifyingGlass, faUser, faCartShopping } from '@fortawesome/free-solid-svg-icons';
@@ -9,17 +10,11 @@ import image from '~/assets/images';
 
 const cx = classNames.bind(style);
 
-const sty = {
-    width: '70%',
-    height: '70%',
-};
-
 const menuItem = [
-    { title: 'HOME', link: '/', active: true },
-    { title: 'BLOG', link: '/blog' },
-    { title: 'PAGE', link: '/page' },
-    { title: 'CONTACT US', link: '/contact' },
-    { title: 'TCH', link: '/contact' },
+    { title: 'TRANG CHỦ', link: '/', active: true },
+    { title: 'SẢN PHẨM', link: '/blog' },
+    { title: 'CHÍNH SÁCH', link: '/page' },
+    { title: 'LIÊN HỆ', link: '/contact' },
 ];
 
 function Header() {
@@ -27,9 +22,9 @@ function Header() {
         <div className={cx('wrapper')}>
             <div className={cx('inner')}>
                 <div className={cx('logo')}>
-                    <a href="/#">
-                        <img style={sty} src={image.logoPNG} alt="ABCD"></img>
-                    </a>
+                    <Link to={'/'}>
+                        <img src={image.logoPNG} alt="ABCD"></img>
+                    </Link>
                 </div>
                 <div className={cx('main-menu')}>
                     {menuItem.map((item, index) => {
@@ -51,12 +46,12 @@ function Header() {
                             </button>
                         </Tippy>
                     </div>
-                    <div className={cx('acctions')}>
-                        <span>
-                            <FontAwesomeIcon icon={faUser}></FontAwesomeIcon>Account
-                        </span>
-                        <FontAwesomeIcon icon={faCartShopping}></FontAwesomeIcon>
-                    </div>
+                </div>
+                <div className={cx('acctions')}>
+                    <Link to={'/login'}>
+                        <FontAwesomeIcon icon={faUser}></FontAwesomeIcon>Account
+                    </Link>
+                    <FontAwesomeIcon icon={faCartShopping}></FontAwesomeIcon>
                 </div>
             </div>
         </div>

@@ -21,7 +21,12 @@
 
 .logo {
     display: flex;
+    height: 100%;
     align-items: center;
+    img {
+        width: 70%;
+        object-fit: cover;
+    }
 }
 
 .main-menu {
@@ -70,7 +75,7 @@
 
 .search {
     height: 40px;
-    width: 211px;
+    //width: 211px;
     padding: 9px 15px 9px 15px;
     display: flex;
     border-radius: var(--search-border-radius);
@@ -95,4 +100,6 @@
 }
 
 .acctions {
+    display: inline-flex;
+    flex-direction: row;
 }
